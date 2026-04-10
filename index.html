@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ワンちゃん旅行 タイプ診断システム</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="app-container">
+        
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="screen active">
+            <div class="glass-card">
+                <div class="badge">診断</div>
+                <h1 class="main-title">ワンちゃん旅行<br><span class="highlight">タイプ診断システム</span></h1>
+                <p class="subtitle">愛犬の性格に合わせた、<br>ぴったりの旅行プランを診断します。</p>
+                <div class="info-box">
+                    <span class="icon">⏱️</span> 所要時間：約1分（2問）
+                </div>
+                <button id="start-btn" class="primary-btn">
+                    <span>診断を開始する</span>
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen">
+            <div class="glass-card quiz-card">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="question-header">
+                    <span class="q-label">質問 <span id="q-number">1</span></span>
+                    <h2 id="question-text" class="question-title">ワンちゃんの大きさは？</h2>
+                    <p id="question-desc" class="question-desc">体のサイズに合ったプランをご提案します</p>
+                </div>
+
+                <div id="options-container" class="options-grid">
+                    <!-- Options injected via JS -->
+                </div>
+
+                <button id="back-btn" class="text-btn hidden">前の質問に戻る</button>
+            </div>
+        </section>
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen">
+            <div class="glass-card result-card">
+                <div class="result-badge">診断結果</div>
+                <h2 class="result-title">「<span id="result-type-name">ワンパクちゃん</span>」タイプ</h2>
+                
+                <div class="result-image-container">
+                    <img id="result-image" src="" alt="おすすめプランイメージ" class="result-image" />
+                    <div class="tag-container" id="result-tags"></div>
+                </div>
+
+                <div class="result-description-box">
+                    <h3>おすすめプランの内容</h3>
+                    <p id="result-desc">体を動かすことが大好きな、「ワンパクちゃん」。...</p>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="restart-btn" class="secondary-btn">もう一度診断する</button>
+                    <button id="top-btn" class="text-btn">トップに戻る</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Decorative background elements -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
