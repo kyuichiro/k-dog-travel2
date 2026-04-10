@@ -78,18 +78,9 @@ body {
 }
 
 .screen {
-    display: none;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: var(--transition);
-    width: 100%;
-}
-
-.screen.active {
     display: block;
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeUp 0.5s ease-out;
+    width: 100%;
+    animation: fadeUp 0.5s ease-out forwards;
 }
 
 @keyframes fadeUp {
