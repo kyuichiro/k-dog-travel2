@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ワンちゃん旅行 タイプ診断システム</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-[#00A0E9] px-6 py-3 shadow-sm">
+        <div class="max-w-custom flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity" onclick="resetApp()">
+                <div>
+                    <h1 class="text-lg font-black leading-none text-[#00A0E9]">ワンちゃん旅行 タイプ診断システム</h1>
+                    <p class="text-[10px] font-bold tracking-widest text-slate-400 uppercase">Travel Diagnosis System</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-28 pb-16 px-6">
+        <div id="app-container" class="max-w-custom">
+            <!-- Content will be injected here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-16 border-t border-slate-100">
+        <div class="max-w-custom px-6 text-center space-y-8">
+            <div class="flex items-center justify-center gap-3">
+                <span class="text-xl font-black text-[#00A0E9]">ワンちゃん旅行 タイプ診断システム</span>
+            </div>
+            <p class="text-xs font-bold text-slate-300 tracking-widest">© ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
